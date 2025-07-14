@@ -25,6 +25,7 @@ RUN apt-get -qq update \
       unzip \
       locales \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN curl -sL https://sentry.io/get-cli/ | SENTRY_CLI_VERSION="2.47.0" sh 
 RUN locale-gen en_US.UTF-8
 ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8'
 
