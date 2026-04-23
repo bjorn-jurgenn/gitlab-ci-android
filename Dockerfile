@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 MAINTAINER Jan Grewe <jan@faked.org>
 
 ENV VERSION_TOOLS "13114758"
@@ -17,10 +17,11 @@ RUN apt-get -qq update \
       html2text \
       openjdk-11-jdk \
       openjdk-17-jdk \
+      openjdk-21-jdk \
       libc6-i386 \
       lib32stdc++6 \
-      lib32gcc1 \
-      lib32ncurses6 \
+      lib32gcc-s1 \
+      lib32ncurses-dev \
       lib32z1 \
       unzip \
       locales \
